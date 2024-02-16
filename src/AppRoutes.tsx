@@ -1,0 +1,25 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/home/home'
+import { Provider } from 'react-redux';
+import { store } from './store/store';
+import RegisterForm from './pages/register/register';
+import LoginForm from './pages/login/login';
+
+const AppRoutes: React.FC = () => {
+  return (
+    <Provider store={store}>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<LoginForm />} />
+        <Route path="/register" element={<RegisterForm />} />
+
+      </Routes>
+    </Router>
+    </Provider>
+ 
+  );
+};
+
+export default AppRoutes;
