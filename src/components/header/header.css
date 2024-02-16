@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: space-around;
     background-color: var(--bg-accent);
-   
+    position: sticky;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -14,7 +14,7 @@
 .main-logo{
     font-family: var(--title);
     font-size: 2rem;
-    color: var(--green);
+    color: var(--lggreen);
     text-decoration: none;
 }
 .main-logo:hover{
