@@ -1,5 +1,7 @@
 import React from 'react';
 import { useRegisterMutation } from '../../store/api/reqres';
+import Header from '../../components/header/header';
+import Footer from '../../components/footer/footer';
 
 interface RegisterFormProps {}
 
@@ -9,7 +11,7 @@ interface FormValues {
 }
 
 const RegisterForm: React.FC<RegisterFormProps> = () => {
-  const [register, { isLoading, isError }] = useRegisterMutation();
+  const [register, { isLoading}] = useRegisterMutation();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -23,10 +25,14 @@ const RegisterForm: React.FC<RegisterFormProps> = () => {
       console.log('Registered successfully');
     } catch (error) {
       console.error('Failed to register:', error);
+      alert("failed to register, please try again");
     }
   };
 
   return (
+    <>
+    <Header />
+    <main>
     <form onSubmit={handleSubmit}>
       <div>
         <label>Email:</label>
@@ -37,8 +43,11 @@ const RegisterForm: React.FC<RegisterFormProps> = () => {
         <input type="password" name="password" />
       </div>
       <button type="submit" disabled={isLoading}>Submit</button>
-      {isError && <span>Failed to register. Please try again.</span>}
+      
     </form>
+    </main>
+    <Footer />
+    </>
   );
 };
 

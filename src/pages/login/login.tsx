@@ -1,5 +1,7 @@
 import React from 'react';
-import { useLoginMutation } from '../../store/api/reqres'
+import { useLoginMutation } from '../../store/api/reqres';
+import Header from '../../components/header/header';
+import Footer from '../../components/footer/footer';
 
 interface LoginFormProps {}
 
@@ -9,7 +11,7 @@ interface FormValues {
 }
 
 const LoginForm: React.FC<LoginFormProps> = () => {
-  const [login, { isLoading, isError }] = useLoginMutation();
+  const [login, { isLoading }] = useLoginMutation();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -23,10 +25,13 @@ const LoginForm: React.FC<LoginFormProps> = () => {
       console.log('Logged in successfully');
     } catch (error) {
       console.error('Failed to login:', error);
+      alert('Failed to login');
     }
   };
 
   return (
+    <>
+     <Header/>
     <form onSubmit={handleSubmit}>
       <div>
         <label>Email:</label>
@@ -37,8 +42,9 @@ const LoginForm: React.FC<LoginFormProps> = () => {
         <input type="password" name="password" />
       </div>
       <button type="submit" disabled={isLoading}>Submit</button>
-      {isError && <span>Failed to login. Please check your credentials.</span>}
     </form>
+    <Footer />
+    </>
   );
 };
 
