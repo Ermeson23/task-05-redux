@@ -4,9 +4,11 @@
 
 :root {
  --bg-accent: #E9EDE8;
+ --bg-green: #DCF3D1;
  --white: #ffff;
  --text: #051000;
  --green: #143E00;
+ --lggreen: #1D5D00;
  --accent: #6AAD4B;
  --txt: 'Inter', sans-serif;
  --title: 'Fjalla One', sans-serif;
