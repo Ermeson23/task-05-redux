@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import { store } from './store/store';
 import RegisterForm from './pages/register/register';
 import LoginForm from './pages/login/login';
+import BookList from './pages/bookList/BookList';
 
 const AppRoutes: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ const AppRoutes: React.FC = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/books" element={<BookList />} />
         <Route path="/login" element={<LoginForm />} />
         <Route path="/register" element={<RegisterForm />} />
 
