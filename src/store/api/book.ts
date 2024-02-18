@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-interface BookData {
+export interface BookData {
     title: string;
     subTitle?: string;
     isbn13: string;
