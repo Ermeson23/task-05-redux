@@ -29,29 +29,29 @@ export default function Cart() {
     return (
         <>
             <Header />
-            <section>
-                <h2>Shopping Cart</h2>
+            <section className="container">
+                <h2>Carrinho de compras</h2>
                 {(cartItems.length === 0) ? (
-                    <p>The cart is empty.</p>
+                    <p>O carrinho está vazio.</p>
                 ) : (
-                    <div>
+                    <div className="card-container">
                         {cartItems.map(item => (
-                            <div key={item.product.isbn13}>
+                            <div className="card" key={item.product.isbn13}>
                                 <img src={item.product.image} alt={item.product.title} />
-                                <h5>{item.product.title}</h5>
-                                <p>${item.product.price * item.quantity}</p>
-                                <p>Quantity: {item.quantity}</p>
+                                <h5 className="card-title">{item.product.title}</h5>
+                                <p>R${item.product.price * item.quantity}</p>
+                                <p>Quantidade: {item.quantity}</p>
                                 <div className="custom-button">
-                                    <button onClick={() => handleAddByUnit(item.product.isbn13, 1)} className="btn btn-success">Add a unit</button>
-                                    <button onClick={() => (item.quantity > 1) ? handleRemoveByUnity(item.product.isbn13, 1) : handleRemoveItem(item.product.isbn13)} className="btn btn-primary">Remover unidade</button>
-                                    <button onClick={() => handleRemoveItem(item.product.isbn13)} className="btn btn-warning">Remove from cart</button>
+                                    <button onClick={() => handleAddByUnit(item.product.isbn13, 1)} className="btn-success">Adicionar unidade</button>
+                                    <button onClick={() => (item.quantity > 1) ? handleRemoveByUnity(item.product.isbn13, 1) : handleRemoveItem(item.product.isbn13)} className="btn-primary">Remover unidade</button>
+                                    <button onClick={() => handleRemoveItem(item.product.isbn13)} className="btn btn-warning">Remover do carrinho</button>
                                 </div>
                             </div>
                         ))}
                     </div>
                 )}
             </section>
-            <button onClick={handleClearCart} className="btn btn-danger clear-cart">Clear Cart</button>
+            <button onClick={handleClearCart} className="btn btn-danger clear-cart">Limpar Carrinho</button>
             <Footer />
         </>
     )
