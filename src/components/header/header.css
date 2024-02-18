@@ -8,13 +8,13 @@
 }
 
 .header img{
-    width: 4rem;
-    height: 4rem;
+    width: 5rem;
+    height: 5rem;
 }
 .main-logo{
     font-family: var(--title);
     font-size: 2rem;
-    color: var(--lggreen);
+    color: var(--lgblue);
     text-decoration: none;
 }
 .main-logo:hover{
@@ -34,7 +34,7 @@
 }
 .nav-link{
     text-decoration: none;
-    color: var(--green);
+    color: var(--blue);
     font-family: var(--txt);
     padding: 0.25rem;
     font-size: 1rem;

@@ -2,6 +2,6 @@ import './footer.css'
 
 export default function Footer(){
     return(
-        <footer className='footer'> <strong>Cat Tales Library </strong>    ©  All Rights Reserved </footer>
+        <footer className='footer'> <strong>Tech-Cat Bookstore </strong>    ©  All Rights Reserved </footer>
     )
 }

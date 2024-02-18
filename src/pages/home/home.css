@@ -1,6 +1,6 @@
 .intro{
     display: flex;
-    background-color: var(--bg-green);
+    background-color: var(--bg-blue);
     color: var(--text);
     font-family: var(--txt);
     align-items: center;
@@ -9,7 +9,7 @@
 }
 
 .intro h2{
-    color: var(--green);
+    color: var(--blue);
     text-align: center;
     font-size: 1.25rem;
     margin-top: 0.125rem;
@@ -19,7 +19,7 @@
 }
 .intro h1{
     font-size: 2.75rem;
-    color: var(--lggreen);
+    color: var(--lgblue);
     margin-bottom: 0;
 }
 .intro-container{

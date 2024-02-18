@@ -7,8 +7,8 @@ export default function Header(){
         <>
         <header className='header'>
             <div className='logo'>
-                <img src={logo} alt='ginger cat with glasses reading a book' loading='lazy'/>
-                <Link className='main-logo' to='/'>CAT TALES </Link>
+                <img src={logo} alt='gray cat on a computer with a bookshelf behind' loading='lazy'/>
+                <Link className='main-logo' to='/'>TECH-CAT </Link>
             </div>
             <div className='navs'>
                 <Link className='nav-link' to='/login'>LOGIN</Link>
