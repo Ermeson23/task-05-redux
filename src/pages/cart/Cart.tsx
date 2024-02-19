@@ -46,10 +46,10 @@ export default function Cart() {
                                 <p>Quantity: {item.quantity}</p>
                                 <div className="custom-button">
                                     <div className="add-remove">
-                                    <button onClick={() => handleAddByUnit(item.product.isbn13, 1)} className="btn-success">+</button>
-                                    <button onClick={() => (item.quantity > 1) ? handleRemoveByUnity(item.product.isbn13, 1) : handleRemoveItem(item.product.isbn13)} className="btn-primary">-</button>
+                                    <button  aria-label='add one copy of this item' onClick={() => handleAddByUnit(item.product.isbn13, 1)} className="btn-success">+</button>
+                                    <button  aria-label='remove one copy of this item' onClick={() => (item.quantity > 1) ? handleRemoveByUnity(item.product.isbn13, 1) : handleRemoveItem(item.product.isbn13)} className="btn-primary">-</button>
                                     </div>
-                                    <button onClick={() => handleRemoveItem(item.product.isbn13)} className="btn btn-warning">Remove from cart</button>
+                                    <button  aria-label='remove this item entirely from cart' onClick={() => handleRemoveItem(item.product.isbn13)} className="btn btn-warning">Remove from cart</button>
                                 </div>
                                 </div>
                             </div>
@@ -57,7 +57,7 @@ export default function Cart() {
 
                     </div>
                 )}
-                   <button onClick={handleClearCart} className="btn btn-danger clear-cart">Clear Cart</button>
+                   <button  aria-label='remove all items from cart' onClick={handleClearCart} className="btn btn-danger clear-cart">Clear Cart</button>
             </section>
          
             </main>

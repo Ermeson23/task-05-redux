@@ -43,7 +43,7 @@ const LoginForm: React.FC<LoginFormProps> = () => {
           <div className='form-div'>
             <div className='form'>
               <div className='image'>
-                <img src={cat} alt='' loading='lazy' />
+                <img src={cat} alt='home office with books, a computer and a cat' loading='lazy' />
               </div>
               <form onSubmit={handleSubmit} className='auth'>
                 <h1> LOGIN</h1>
@@ -55,8 +55,8 @@ const LoginForm: React.FC<LoginFormProps> = () => {
                   <label>Password:</label>
                   <input type="password" name="password" />
                 </div>
-                <button type="submit" className='submit' disabled={isLoading}>Submit</button>
-                <Link to='/register' className='link-dom'> Don't have an account? <strong> Sign up</strong></Link>
+                <button type="submit" className='submit'  aria-label='submit login info' disabled={isLoading}>Submit</button>
+                <Link to='/register' className='link-dom' aria-label='redirect to register'> Don't have an account? <strong> Sign up</strong></Link>
               </form>
             </div>
           </div>
