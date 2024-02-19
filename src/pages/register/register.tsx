@@ -39,7 +39,7 @@ const RegisterForm: React.FC<RegisterFormProps> = () => {
       <section className='form-section'>
         <div className='form-div'>
         <div className='form'>
-        <img src={cat} alt='' loading='lazy'/>
+        <img src={cat} alt='home office with books, a computer and a cat' loading='lazy'/>
         <form onSubmit={handleSubmit} className='auth'>
           <h1> REGISTER</h1>
           <div className='inputs'>
@@ -50,8 +50,8 @@ const RegisterForm: React.FC<RegisterFormProps> = () => {
             <label>Password:</label>
             <input type="password" name="password" />
           </div>
-          <button type="submit" className='submit' disabled={isLoading}>Submit</button>
-          <Link to='/login' className='link-dom'> Already have an account? <strong> Login</strong></Link>
+          <button type="submit" className='submit'  aria-label='submit register info' disabled={isLoading}>Submit</button>
+          <Link to='/login' className='link-dom' aria-label='redirect to login'> Already have an account? <strong> Login</strong></Link>
         </form>
         </div>
         </div>

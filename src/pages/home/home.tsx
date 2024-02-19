@@ -20,7 +20,7 @@ export default function Home(){
                         Owned by a tech-savvy feline, our bookstore offers a unique selection of books to satisfy your inner geek,
                         all curated with a paw-some attention to detail.
                     </p>
-                    <a href="#about"><button className="intro-btn">KNOW MORE</button></a>
+                    <a href="#about"><button  aria-label='view more about this webpage' className="intro-btn">KNOW MORE</button></a>
                 </div>
                 
                     <img src={cat} alt='a ginger cat and a woman on a computer surrounded by books' loading="lazy"/>

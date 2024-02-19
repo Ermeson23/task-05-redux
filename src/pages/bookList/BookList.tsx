@@ -35,7 +35,7 @@ export default function BookList() {
         <h1> OUR BOOK SELECTION</h1>
         <p> 
             Tech-Cat's catalog offers a paw-some array of coding and tech books, carefully curated to satisfy every curiosity.
-            From beginner primers to advanced guides, embark on your tech journey with our purr-fect selection. <Link className='log' to='/login '>Log in</Link> to check your cart
+            From beginner primers to advanced guides, embark on your tech journey with our purr-fect selection. <Link  aria-label='redirect to login' className='log' to='/login '>Log in</Link> to check your cart
         </p>
         </div>
         <h2>Book List</h2>
@@ -46,7 +46,7 @@ export default function BookList() {
                 <h3>{book.title}</h3>
                 <p>{book.subTitle ? book.subTitle : '(No subtitle available)'}</p>
                 <p>{book.price}</p>
-                <button onClick={() => handleAddToCart(book)}>  Add to cart</button>
+                <button  aria-label='add item to cart' onClick={() => handleAddToCart(book)}>  Add to cart</button>
                 
              
             </div>
