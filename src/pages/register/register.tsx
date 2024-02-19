@@ -2,6 +2,9 @@ import React from 'react';
 import { useRegisterMutation } from '../../store/api/reqres';
 import Header from '../../components/header/header';
 import Footer from '../../components/footer/footer';
+import '../auth.css';
+import cat from '../../assets/registercat.webp';
+import { Link } from 'react-router-dom';
 
 interface RegisterFormProps {}
 
@@ -31,20 +34,29 @@ const RegisterForm: React.FC<RegisterFormProps> = () => {
 
   return (
     <>
-    <Header />
-    <main>
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label>Email:</label>
-        <input type="email" name="email" />
-      </div>
-      <div>
-        <label>Password:</label>
-        <input type="password" name="password" />
-      </div>
-      <button type="submit" disabled={isLoading}>Submit</button>
-      
-    </form>
+     <Header/>
+     <main className='render'>
+      <section className='form-section'>
+        <div className='form-div'>
+        <div className='form'>
+        <img src={cat} alt='' loading='lazy'/>
+        <form onSubmit={handleSubmit} className='auth'>
+          <h1> REGISTER</h1>
+          <div className='inputs'>
+            <label>Email:</label>
+            <input type="email" name="email" />
+          </div>
+          <div className='inputs'>
+            <label>Password:</label>
+            <input type="password" name="password" />
+          </div>
+          <button type="submit" className='submit' disabled={isLoading}>Submit</button>
+          <Link to='/login' className='link-dom'> Already have an account? <strong> Login</strong></Link>
+        </form>
+        </div>
+        </div>
+        </section>
+        
     </main>
     <Footer />
     </>

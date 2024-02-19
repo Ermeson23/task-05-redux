@@ -23,13 +23,13 @@ export default function Home(){
                     <a href="#about"><button className="intro-btn">KNOW MORE</button></a>
                 </div>
                 
-                    <img src={cat} alt='a ginger cat and a woman on a computer surrounded by books'/>
+                    <img src={cat} alt='a ginger cat and a woman on a computer surrounded by books' loading="lazy"/>
                 
                 </div>
             </section>
             <section id="about" className="about">
                 <div className="about-container">
-                <img src={img} alt='a ginger cat sleeping on a book beside a computer'/>
+                <img src={img} alt='a ginger cat sleeping on a book beside a computer' loading="lazy"/>
                 <div className="about-info">
                 <h1>TECH-CAT: the technology bookstore</h1>
                 <h2> learn with our tech books!</h2>
