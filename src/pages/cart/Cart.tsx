@@ -2,9 +2,10 @@ import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/store";
 
-import Header from "../../components/header/header"
-import Footer from "../../components/footer/footer"
+import Header from "../../components/header/header";
+import Footer from "../../components/footer/footer";
 import { addByUnity, clearCart, removeByUnity, removeItemCart } from "../../store/api/cartSlice";
+import { CartItem } from "../../store/api/cartSlice";
 
 export default function Cart() {
     const dispatch = useDispatch();
@@ -35,7 +36,7 @@ export default function Cart() {
                     <p>Cart is empty.</p>
                 ) : (
                     <div className="card-container">
-                        {cartItems.map(item => (
+                        {cartItems.map((item: CartItem) => (
                             <div className="card" key={item.product.isbn13}>
                                 <img src={item.product.image} alt={item.product.title} />
                                 <h5 className="card-title">{item.product.title}</h5>
