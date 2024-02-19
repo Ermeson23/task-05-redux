@@ -1,0 +1,22 @@
+.footer{
+    display: flex;
+    background-color: var(--bg-accent);
+    padding: 1rem;
+    color: var(--green);
+    font-size: 1.125rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.125rem;
+    font-family: var(--txt);
+  
+    width: 100%;
+    margin: 0;
+
+}
+.footer strong:hover{
+color: var(--accent);
+
+}
+.footer strong{
+    font-family: var(--title);
+}
