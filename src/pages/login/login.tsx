@@ -2,6 +2,10 @@ import React from 'react';
 import { useLoginMutation } from '../../store/api/reqres';
 import Header from '../../components/header/header';
 import Footer from '../../components/footer/footer';
+import cat from '../../assets/logincat.webp'
+import '../auth.css' //styles for login and register
+import { Link } from 'react-router-dom';
+
 
 interface LoginFormProps {}
 
@@ -32,17 +36,31 @@ const LoginForm: React.FC<LoginFormProps> = () => {
   return (
     <>
      <Header/>
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label>Email:</label>
-        <input type="email" name="email" />
-      </div>
-      <div>
-        <label>Password:</label>
-        <input type="password" name="password" />
-      </div>
-      <button type="submit" disabled={isLoading}>Submit</button>
-    </form>
+     <main className='render'>
+      <section className='form-section'>
+        <div className='form-div'>
+        <div className='form'>
+          <div className='image'>
+        <img src={cat} alt='' loading='lazy'/>
+        </div>
+        <form onSubmit={handleSubmit} className='auth'>
+          <h1> LOGIN</h1>
+          <div className='inputs'>
+            <label>Email:</label>
+            <input type="email" name="email" />
+          </div>
+          <div className='inputs'>
+            <label>Password:</label>
+            <input type="password" name="password" />
+          </div>
+          <button type="submit" className='submit' disabled={isLoading}>Submit</button>
+          <Link to='/register' className='link-dom'> Don't have an account? <strong> Sign up</strong></Link>
+        </form>
+        </div>
+        </div>
+        </section>
+        
+    </main>
     <Footer />
     </>
   );
