@@ -1,0 +1,33 @@
+.book-skeleton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-skeleton {
+  width: 200px;
+  height: 200px;
+  background-color: #f0f0f0;
+  margin-bottom: 10px;
+}
+
+.title-skeleton {
+  width: 60%;
+  height: 20px;
+  background-color: #f0f0f0;
+  margin-bottom: 10px;
+}
+
+.price-skeleton {
+  width: 40%;
+  height: 20px;
+  background-color: #f0f0f0;
+  margin-bottom: 10px;
+}
+
+.button-skeleton {
+  width: 100px;
+  height: 40px;
+  background-color: #f0f0f0;
+  margin-bottom: 10px;
+}
