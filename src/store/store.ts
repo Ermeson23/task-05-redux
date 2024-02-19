@@ -1,19 +1,32 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { reqApi } from './api/reqres';
 import { bookApi } from './api/book';
 import cartReducer from './api/cartSlice';
 import { setupListeners } from '@reduxjs/toolkit/query/react';
+import storage from 'redux-persist/es/storage';
+import { persistReducer, persistStore } from 'redux-persist';
+
+const rootReducer = combineReducers({
+    [reqApi.reducerPath]: reqApi.reducer,
+    [bookApi.reducerPath]: bookApi.reducer,
+    cart: cartReducer
+});
+
+const persistConfig = {
+    key: 'root',
+    storage,
+    whitelist: ['cart']
+};
+
+const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
-    reducer: {
-        [reqApi.reducerPath]: reqApi.reducer,
-        [bookApi.reducerPath]: bookApi.reducer,
-        cart: cartReducer
-    },
+    reducer: persistedReducer,
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware().concat(reqApi.middleware, bookApi.middleware),
 });
 
+export const persistor = persistStore(store);
 
 setupListeners(store.dispatch);
 
