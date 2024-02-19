@@ -39,7 +39,7 @@ export default function Cart() {
                             <div className="card" key={item.product.isbn13}>
                                 <img src={item.product.image} alt={item.product.title} />
                                 <h5 className="card-title">{item.product.title}</h5>
-                                <p>${item.product.price * item.quantity}</p>
+                                <p>${parseFloat(item.product.price.slice(1)) * item.quantity}</p>
                                 <p>Quantity: {item.quantity}</p>
                                 <div className="custom-button">
                                     <button onClick={() => handleAddByUnit(item.product.isbn13, 1)} className="btn-success">Add a unity</button>
@@ -48,6 +48,7 @@ export default function Cart() {
                                 </div>
                             </div>
                         ))}
+
                     </div>
                 )}
             </section>

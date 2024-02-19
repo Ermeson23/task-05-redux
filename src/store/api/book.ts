@@ -4,7 +4,7 @@ export interface BookData {
     title: string;
     subTitle?: string;
     isbn13: string;
-    price: number;
+    price: string;
     image: string;
     url: string;
 }
