@@ -1,3 +1,4 @@
+import BookSkeleton from '../../components/skeleton/BookSkeleton';
 import { BookData, useGetBookQuery } from '../../store/api/book';
 import { addItem } from '../../store/api/cartSlice';
 import { useDispatch } from 'react-redux';
@@ -15,7 +16,7 @@ export default function BookList() {
   };
 
   if (isLoading) {
-    return <p>Loading books...</p>;
+    return <BookSkeleton />
   }
 
   if (!data || !('books' in data)) {
