@@ -4,7 +4,6 @@ import { useDispatch } from 'react-redux';
 
 export default function BookList() {
   const { data, isLoading } = useGetBookQuery();
-
   const dispatch = useDispatch();
 
   const handleAddToCart = (product: BookData) => {
@@ -16,11 +15,11 @@ export default function BookList() {
     return <p>Loading books...</p>;
   }
 
-  if (!data || !Array.isArray(data.books) || !data.books.every((book: any) => typeof book === 'object')) {
-    return <p>Erro: API data in unexpected format.</p>;
+  if (!data || !('books' in data)) {
+    return <p>Error: API data in unexpected format.</p>;
   }
 
-  const { books } = data;
+  const books: BookData[] = data.books as BookData[];
 
   return (
     <div>
