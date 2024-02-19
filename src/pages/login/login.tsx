@@ -28,7 +28,7 @@ const LoginForm: React.FC<LoginFormProps> = () => {
     try {
       await login(formData);
       console.log('Logged in successfully');
-      navigate('/books');
+      navigate('/cart');
     } catch (error) {
       console.error('Failed to login:', error);
       alert('Failed to login');
