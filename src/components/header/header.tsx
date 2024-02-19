@@ -13,7 +13,7 @@ export default function Header(){
             <div className='navs'>
                 <Link className='nav-link' to='/login'>LOGIN</Link>
                 <Link className='nav-link' to='/register'>SIGN UP</Link>
-                <Link className='nav-link' to='/cart'>Cart</Link>
+                <Link className='nav-link' to='/books'>BOOKS</Link>
 
             </div>
         </header>

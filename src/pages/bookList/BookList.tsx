@@ -4,6 +4,7 @@ import { addItem } from '../../store/api/cartSlice';
 import { useDispatch } from 'react-redux';
 import Footer from '../../components/footer/footer';
 import Header from '../../components/header/header';
+import { Link } from 'react-router-dom';
 import './booklist.css'
 
 export default function BookList() {
@@ -34,7 +35,7 @@ export default function BookList() {
         <h1> OUR BOOK SELECTION</h1>
         <p> 
             Tech-Cat's catalog offers a paw-some array of coding and tech books, carefully curated to satisfy every curiosity.
-            From beginner primers to advanced guides, embark on your tech journey with our purr-fect selection.
+            From beginner primers to advanced guides, embark on your tech journey with our purr-fect selection. <Link className='log' to='/login '>Log in</Link> to check your cart
         </p>
         </div>
         <h2>Book List</h2>

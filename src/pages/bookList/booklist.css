@@ -98,6 +98,14 @@
     background-color: var(--add);
 
 }
+.log{
+    color: var(--blue);
+    font-weight: bolder;
+    text-decoration: none;
+}
+.log:hover{
+    text-decoration: underline;
+}
 @media (max-width: 768px){
     .shop-container{
         width: 100%;

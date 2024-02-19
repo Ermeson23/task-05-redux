@@ -10,7 +10,9 @@
  --blue: #0A5082;
  --lgblue: #0063AB;
  --accent: #5DA5D8;
- --add:rgb(10, 130, 36)  ;
+ --add:rgb(10, 130, 36);
+ --remove:rgb(130, 10, 10);
+ --mid:rgb(255, 11, 11);
  --txt: 'Inter', sans-serif;
  --title: 'Fjalla One', sans-serif;
 }
@@ -24,3 +26,10 @@ body {
   overflow-x: hidden;
 }
 
+.render{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
