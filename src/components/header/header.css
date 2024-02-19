@@ -5,6 +5,7 @@
     background-color: var(--bg-accent);
     position: sticky;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 100%;
 }
 
 .header img{
