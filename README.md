@@ -4,7 +4,7 @@ Olá, nós somos o grupo 04 da trilha front-end da 13º edição do Vem Ser DBC,
 - Clara Maestri
   ( [github](https://github.com/vivalaclara/) | [linkedin](https://www.linkedin.com/in/clara-maestri-681352210/) )
 - Ermeson José Ribeiro
-  ( [github](https://github.com/Ermeson23) | [linkedin](linkedin.com/in/ermeson-ribeiro-a29121212/) )
+  ( [github](https://github.com/Ermeson23) | [linkedin](https://www.linkedin.com/in/ermeson-ribeiro-a29121212/) )
 ## 📄 Descrição
 O projeto propõe a criação de um E-commerce de Livros intitulado como Tech-Cat Bookstore, construído com a biblioteca  React, para nos auxiliar no desenvolvimento da aplicação, utilizamos HTML e CSS para a escrita e estilização e o TypeScipt para a interação do website. Nele também consuminos API'S, uma para obter os dados dos livros utilizados pelo o e-commerce e a outra para permitir a simulação do cadastro e do login de usuários no sistema.  No demais, utilizamos o Redux para o gerenciamento de estados na aplicação, sobretudo destacamos o uso do Redux RTK Query.
 ## 🖇️ Especificações 
