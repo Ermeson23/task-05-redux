@@ -65,6 +65,7 @@
 .intro-btn:hover{
     color: var(--text);
     background-color: var(--accent);
+    cursor: pointer;
 }
 
 @media (max-width: 767px){

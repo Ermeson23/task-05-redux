@@ -66,21 +66,25 @@ button{
     font-weight: bold;
     text-transform: uppercase;
     margin: 1rem;
-
+    cursor: pointer;
 }
 .add-remove button{
  width: 4rem;
+ cursor: pointer;
 }
 .btn-success:hover {
     background-color: var(--add);
+    cursor: pointer;
 }
 
 .btn-primary:hover {
     background-color: var(--mid);
+    cursor: pointer;
 }
 
 .btn-warning:hover {
     background-color: var(--remove);
+    cursor: pointer;
 }
 
 .clear-cart {
