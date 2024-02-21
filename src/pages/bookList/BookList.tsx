@@ -39,7 +39,7 @@ export default function BookList() {
             </p>
           </div>
           <h2>Lista de Livros</h2>
-          <div className='shop-container'>
+          <div className='shop-container last-item'>
             {books.map((book: BookData) => (
               <div className='book-card' key={book.isbn13}>
                 <img src={book.image} alt={book.title} loading='lazy' />
