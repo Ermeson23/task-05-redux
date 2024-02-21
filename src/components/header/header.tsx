@@ -14,6 +14,7 @@ export default function Header(){
                 <Link  aria-label='redirect to login' className='nav-link' to='/login'>LOGIN</Link>
                 <Link  aria-label='redirect to register' className='nav-link' to='/register'>CADASTRO</Link>
                 <Link   aria-label='redirect to book list'className='nav-link' to='/books'>LIVROS</Link>
+                <Link   aria-label='redirect to cart'className='nav-link' to='/cart'>CARRINHO</Link>
 
             </div>
         </header>

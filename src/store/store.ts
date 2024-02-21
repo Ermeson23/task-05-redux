@@ -5,17 +5,19 @@ import cartReducer from './api/cartSlice';
 import { setupListeners } from '@reduxjs/toolkit/query/react';
 import storage from 'redux-persist/es/storage';
 import { persistReducer, persistStore } from 'redux-persist';
+import purchaseHistorySliceReducer from './api/historySlice'
 
 const rootReducer = combineReducers({
     [reqApi.reducerPath]: reqApi.reducer,
     [bookApi.reducerPath]: bookApi.reducer,
-    cart: cartReducer
+    cart: cartReducer,
+    history: purchaseHistorySliceReducer,
 });
 
 const persistConfig = {
     key: 'root',
     storage,
-    whitelist: ['cart']
+    whitelist: ['cart', 'history']
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
