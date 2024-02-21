@@ -83,6 +83,9 @@ button{
     background-color: var(--remove);
 }
 
+.clear-cart {
+    margin-bottom: 4rem;
+}
 
 
 .clear-cart:hover {

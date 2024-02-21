@@ -7,6 +7,7 @@ import RegisterForm from './pages/register/register';
 import LoginForm from './pages/login/login';
 import BookList from './pages/bookList/BookList';
 import Cart from './pages/cart/Cart';
+import Logged from './pages/loggedArea/logged';
 
 const AppRoutes: React.FC = () => {
   return (
@@ -18,6 +19,7 @@ const AppRoutes: React.FC = () => {
         <Route path="/login" element={<LoginForm />} />
         <Route path="/register" element={<RegisterForm />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/logged" element={<Logged/>} />
 
       </Routes>
     </Router>

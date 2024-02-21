@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import Header from '../../components/header/header';
 import Footer from '../../components/footer/footer';
 import cat from '../../assets/logincat.webp';
-import '../auth.css'; //styles for login and register
+import '../auth.css';
 import { Link } from 'react-router-dom';
 
 interface LoginFormProps {}
@@ -27,11 +27,11 @@ const LoginForm: React.FC<LoginFormProps> = () => {
 
     try {
       await login(formData);
-      console.log('Logged in successfully');
-      navigate('/cart');
+      console.log('Usuário logado com sucesso');
+      navigate('/logged');
     } catch (error) {
-      console.error('Failed to login:', error);
-      alert('Failed to login');
+      console.error('Falha ao fazer login:', error);
+      alert('Falha ao fazer login');
     }
   };
 
@@ -48,15 +48,15 @@ const LoginForm: React.FC<LoginFormProps> = () => {
               <form onSubmit={handleSubmit} className='auth'>
                 <h1> LOGIN</h1>
                 <div className='inputs'>
-                  <label>Email:</label>
-                  <input type="email" name="email" />
+                  <label htmlFor="email">E-mail:</label>
+                  <input type="email" name="email" id='email' required/>
                 </div>
                 <div className='inputs'>
-                  <label>Password:</label>
-                  <input type="password" name="password" />
+                  <label htmlFor='password'>Senha:</label>
+                  <input type="password" name="password" id="password" required/>
                 </div>
-                <button type="submit" className='submit'  aria-label='submit login info' disabled={isLoading}>Submit</button>
-                <Link to='/register' className='link-dom' aria-label='redirect to register'> Don't have an account? <strong> Sign up</strong></Link>
+                <button type="submit" className='submit'  aria-label='submit login info' disabled={isLoading}>Entrar</button>
+                <Link to='/register' className='link-dom' aria-label='redirect to register'> Não tem uma conta? <strong> Cadastre-se</strong></Link>
               </form>
             </div>
           </div>
