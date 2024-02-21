@@ -31,7 +31,7 @@ const Logged: React.FC = () => {
         
         
           {purchaseHistory.map((purchase: PurchaseItem, index: number) => (
-            <div className='bought' key={index}>
+            <div className={`bought ${index === purchaseHistory.length - 1 ? 'last-item' : ''}`} key={index}>
               
              <p> Título: {purchase.title}</p>
              <p> Quantidade: {purchase.quantity}</p> 

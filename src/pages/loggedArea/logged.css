@@ -48,4 +48,9 @@
     padding: 2rem;
     justify-self: center;
     border-radius: 0.625rem;
+    margin-bottom: 1rem;
+}
+
+.last-item {
+    margin-bottom: 5rem;
 }
