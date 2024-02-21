@@ -1,6 +1,8 @@
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/store";
+import { useNavigate } from "react-router-dom";
+
 import './Cart.css'
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
@@ -11,6 +13,7 @@ import { PurchaseItem, addToHistory } from "../../store/api/historySlice";
 export default function Cart() {
     const dispatch = useDispatch();
     const cartItems = useSelector((state: RootState) => state.cart.items);
+    const navigate = useNavigate();
 
     const calculateTotal = () => {
         let total = 0;
@@ -43,6 +46,7 @@ export default function Cart() {
         
         console.log("Itens a serem adicionados ao histórico:", itemsToAddToHistory);
         dispatch(addToHistory(itemsToAddToHistory)); 
+        navigate("/logged");
         dispatch(clearCart()); 
       };
     return (
