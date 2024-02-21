@@ -35,7 +35,7 @@ export default function BookList() {
             <h1> Nossa Coleção de Livros</h1>
             <p>
               O catálogo da Tech-Cat oferece uma variedade de livros de programação e tecnologia, cuidadosamente selecionados para satisfazer todas as curiosidades.
-              De livros iniciantes a guias avançados, embarque em sua jornada tecnológica com nossa seleção perfeita. <Link aria-label='Redireciona para o login' className='log' to='/login '>Faça login</Link> para acessar seu carrinho
+              De livros iniciantes a guias avançados, embarque em sua jornada tecnológica com nossa seleção perfeita. <Link aria-label='Redireciona para o login' className='log' to='/login '>Faça login</Link> para acessar seu histórico
             </p>
           </div>
           <h2>Lista de Livros</h2>

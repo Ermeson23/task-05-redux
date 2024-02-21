@@ -1,0 +1,51 @@
+.logged h1, .logged h2{
+    font-family: var(--title);
+    text-transform: uppercase;
+    color: var(--blue);
+}
+.logged{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: var(--white);
+    height: 100vh;
+    font-family: var(--txt);
+
+}
+
+.logged h1{
+    font-size: 2.25rem;
+}
+.logged h2{
+    font-size: 1.75rem;
+}
+.eas{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.easy{
+    width: 10rem;
+}
+.welcome{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-accent);
+    width: 100vw;
+    align-items: center;
+    padding: 2rem;
+    justify-content: center;
+}
+.bought{
+    display: flex;
+    flex-direction: column;
+    text-wrap:wrap;
+    background-color: var(--bg-blue);
+    color: var(--text);
+    font-size: 1rem;
+    padding: 2rem;
+    justify-self: center;
+    border-radius: 0.625rem;
+}

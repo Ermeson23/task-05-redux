@@ -6,6 +6,7 @@ import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
 import { addByUnity, clearCart, removeByUnity, removeItemCart } from "../../store/api/cartSlice";
 import { CartItem } from "../../store/api/cartSlice";
+import { PurchaseItem, addToHistory } from "../../store/api/historySlice";
 
 export default function Cart() {
     const dispatch = useDispatch();
@@ -34,7 +35,16 @@ export default function Cart() {
     const handleClearCart = () => {
         dispatch(clearCart());
     }
-
+    const handleAddToHistory = () => {
+        const itemsToAddToHistory: PurchaseItem[] = cartItems.map((item: CartItem) => ({
+          title: item.product.title,
+          quantity: item.quantity,
+        }));
+        
+        console.log("Itens a serem adicionados ao histórico:", itemsToAddToHistory);
+        dispatch(addToHistory(itemsToAddToHistory)); 
+        dispatch(clearCart()); 
+      };
     return (
         <>
             <Header />
@@ -65,7 +75,7 @@ export default function Cart() {
 
                     </div>
                 )}
-                   <button  aria-label='Remover todos os itens do carrinho' onClick={handleClearCart} className="btn btn-danger clear-cart">Limpar carrinho</button>
+                   <button  aria-label='Remover todos os itens do carrinho' onClick={handleAddToHistory} className="btn btn-danger clear-cart">COMPRAR</button>
 
                    <div>
                         <p>Total do carrinho: ${calculateTotal().toFixed(2)}</p>
