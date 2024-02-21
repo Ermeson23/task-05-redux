@@ -25,10 +25,10 @@ const RegisterForm: React.FC<RegisterFormProps> = () => {
 
     try {
       await register(formData).unwrap();
-      console.log('Registered successfully');
+      console.log('Usuário cadastrado com successo');
     } catch (error) {
-      console.error('Failed to register:', error);
-      alert("failed to register, please try again");
+      console.error('Falha ao se cadastrar:', error);
+      alert("Falha ao se cadastrar, por favor tente novamente mais tarde");
     }
   };
 
@@ -41,17 +41,17 @@ const RegisterForm: React.FC<RegisterFormProps> = () => {
         <div className='form'>
         <img src={cat} alt='home office with books, a computer and a cat' loading='lazy'/>
         <form onSubmit={handleSubmit} className='auth'>
-          <h1> REGISTER</h1>
+          <h1>Cadastro</h1>
           <div className='inputs'>
-            <label>Email:</label>
-            <input type="email" name="email" />
+            <label htmlFor='email'>E-mail:</label>
+            <input type="email" name="email" id='email' required/>
           </div>
           <div className='inputs'>
-            <label>Password:</label>
-            <input type="password" name="password" />
+            <label htmlFor='password'>Senha:</label>
+            <input type="password" name="password" id='password' required />
           </div>
-          <button type="submit" className='submit'  aria-label='submit register info' disabled={isLoading}>Submit</button>
-          <Link to='/login' className='link-dom' aria-label='redirect to login'> Already have an account? <strong> Login</strong></Link>
+          <button type="submit" className='submit'  aria-label='submit register info' disabled={isLoading}>Cadastrar-se</button>
+          <Link to='/login' className='link-dom' aria-label='redirect to login'> Já tem uma conta? <strong> Faça login</strong></Link>
         </form>
         </div>
         </div>

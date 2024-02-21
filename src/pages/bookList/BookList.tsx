@@ -21,42 +21,40 @@ export default function BookList() {
   }
 
   if (!data || !('books' in data)) {
-    return <p>Error: API data in unexpected format.</p>;
+    return <p>Erro: dados da API em formato inesperado.</p>;
   }
 
   const books: BookData[] = data.books as BookData[];
 
   return (
     <>
-    <Header />
-    <main className='render'>
-      <section className='shop-section'>
-       <div className='shop-intro'>
-        <h1> OUR BOOK SELECTION</h1>
-        <p> 
-            Tech-Cat's catalog offers a paw-some array of coding and tech books, carefully curated to satisfy every curiosity.
-            From beginner primers to advanced guides, embark on your tech journey with our purr-fect selection. <Link  aria-label='redirect to login' className='log' to='/login '>Log in</Link> to check your cart
-        </p>
-        </div>
-        <h2>Book List</h2>
-        <div className='shop-container'>
-          {books.map((book: BookData) => (
-            <div  className='book-card' key={book.isbn13}>
-              <img src={book.image} alt={book.title} loading='lazy' />
+      <Header />
+      <main className='render'>
+        <section className='shop-section'>
+          <div className='shop-intro'>
+            <h1> Nossa Coleção de Livros</h1>
+            <p>
+              O catálogo da Tech-Cat oferece uma variedade de livros de programação e tecnologia, cuidadosamente selecionados para satisfazer todas as curiosidades.
+              De livros iniciantes a guias avançados, embarque em sua jornada tecnológica com nossa seleção perfeita. <Link aria-label='Redireciona para o login' className='log' to='/login '>Faça login</Link> para acessar seu carrinho
+            </p>
+          </div>
+          <h2>Lista de Livros</h2>
+          <div className='shop-container'>
+            {books.map((book: BookData) => (
+              <div className='book-card' key={book.isbn13}>
+                <img src={book.image} alt={book.title} loading='lazy' />
                 <h3>{book.title}</h3>
-                <p>{book.subTitle ? book.subTitle : '(No subtitle available)'}</p>
+                <p>{book.subTitle ? book.subTitle : 'Nenhum subtítulo Disponível'}</p>
                 <p>{book.price}</p>
-                <button  aria-label='add item to cart' onClick={() => handleAddToCart(book)}>  Add to cart</button>
-                
-             
-            </div>
-          ))}
-        </div>
+                <button aria-label='Adicionar item ao carrinho' onClick={() => handleAddToCart(book)}>Adicionar ao carrinho</button>
+              </div>
+            ))}
+          </div>
 
-    </section>
+        </section>
 
-    </main>
-    <Footer />
+      </main>
+      <Footer />
     </>
   );
 };
