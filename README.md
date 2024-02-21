@@ -1,30 +1,37 @@
-# React + TypeScript + Vite
+# 🚀 Projeto Final - Redux: VS13 Trilha Frontend
+Olá, nós somos o grupo 04 da trilha front-end da 13º edição do Vem Ser DBC, e esse é o projeto final do módulo de Redux!
+## 👤 Integrantes
+- Clara Maestri
+  ( [github](https://github.com/vivalaclara/) | [linkedin](https://www.linkedin.com/in/clara-maestri-681352210/) )
+- Ermeson José Ribeiro
+  ( [github](https://github.com/Ermeson23) | [linkedin](https://www.linkedin.com/in/ermeson-ribeiro-a29121212/) )
+## 📄 Descrição
+O projeto propõe a criação de um E-commerce de Livros intitulado como Tech-Cat Bookstore, construído com a biblioteca  React, para nos auxiliar no desenvolvimento da aplicação, utilizamos HTML e CSS para a escrita e estilização e o TypeScipt para a interação do website. Nele também consuminos API'S, uma para obter os dados dos livros utilizados pelo o e-commerce e a outra para permitir a simulação do cadastro e do login de usuários no sistema.  No demais, utilizamos o Redux para o gerenciamento de estados na aplicação, sobretudo destacamos o uso do Redux RTK Query.
+## 🖇️ Especificações 
+### 🖥️ Páginas 
+  Nosso projeto possui as seguintes telas:
+  - Landing Page
+  - Página de Login
+  - Página de Cadastro
+  - Página de Livros
+  - Página de Carrinho
+### 🖼️ Layout
+Foi utilizada uma paleta de cores própria. Tal paleta apresenta um tema claro e está adaptada ao 
+contraste ideal. 
+## ⚙️ Como Executar na sua máquina 
+- 1 -  Execute "npm install" para instalar as dependencias do package
+- 2 -  Execute para instalar as dependências do react-redux: npm install @reduxjs/toolkit react-redux
+- 3 -  Execute npm install axios para instalar o axios
+- 4 -  Execute npm install --save-dev @types/react-redux para adicionar tipos TypeScript para o React Redux
+- 5 -  Execute npm install redux redux-persist react-redux para implementar a persistência de dados com redux
+- 6 -  abra o arquivo index.html em seu navegador (com live serer, por exemplo)
+## 💻 Tecnologias utilizadas
+- Node.js
+- React
+- TypeScript
+- Redux RTK Query
+- HTML5
+- CSS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+  ### ✨ Bibliotecas online
+  As API's utilizadas foram [IT Bookstore API](https://api.itbook.store/) e [Reqres](https://reqres.in/). No que se refere as fontes, utilizamos o [Google Fonts](https://fonts.google.com/).
